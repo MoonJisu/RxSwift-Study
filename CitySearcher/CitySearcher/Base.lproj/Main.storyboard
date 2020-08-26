@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CitySearcher" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="1ZI-Wa-de1">
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="qFR-Ig-d66"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zKR-vo-lfd">
+                                <rect key="frame" x="0.0" y="132" width="414" height="730"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="zKR-vo-lfd" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="9H7-Sb-4Ob"/>
+                            <constraint firstItem="1ZI-Wa-de1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Ese-9a-Nzh"/>
+                            <constraint firstItem="1ZI-Wa-de1" firstAttribute="trailing" secondItem="zKR-vo-lfd" secondAttribute="trailing" id="dqM-QK-oTr"/>
+                            <constraint firstItem="1ZI-Wa-de1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="gPv-Gi-3lE"/>
+                            <constraint firstItem="1ZI-Wa-de1" firstAttribute="leading" secondItem="zKR-vo-lfd" secondAttribute="leading" id="iei-We-Gic"/>
+                            <constraint firstItem="1ZI-Wa-de1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nWR-Gq-ovd"/>
+                            <constraint firstItem="zKR-vo-lfd" firstAttribute="top" secondItem="1ZI-Wa-de1" secondAttribute="bottom" id="sVR-2B-LfY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="1ZI-Wa-de1" id="pWR-VK-OpV"/>
+                        <outlet property="tableView" destination="zKR-vo-lfd" id="fjo-cj-4Eh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+</document>
