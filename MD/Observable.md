@@ -63,3 +63,27 @@
 
 
 
+<hr></hr>
+
+### Hot Observable
+
+- 생성과 동시에 이벤트를 방출하기 시작
+- 이후 subscribe 되는 시점과 상관없이 옵저버들에게 이벤트를 중간부터 전송해줌
+- 여러 Observer가 하나의 Observable을 공유 가능
+- ex) (이벤트 방출 시작) 1 2 3 4 (구독 시작) 5 6 7 -> 1 2 3 4의 이벤트는 받지 못함
+- Operator
+  - publish
+    - Observable을 ConnectableObservable로 변환
+  - replay
+    - Observable을 ConnectableObservable로 변환
+    - 구독을 시작하면 발생했던 아이템을 처음부터 전부 반환
+
+### Cold Observable
+
+- 옵저버가 subscribe 되는 시점부터 이벤트를 생성하여 방출하기 시작
+- Hot Observable로 생성하지 않은 것들은 Cold Observable
+- Observer마다 별도의 Observable 인스턴스를 가짐
+- ex) (구독시작, 이벤트 방출 시작) 1 2 3 4 5 -> 구독 시작 시 이벤트가 오기 시작해서 처음부터 모든 데이터를 받을 수 있음
+
+
+
