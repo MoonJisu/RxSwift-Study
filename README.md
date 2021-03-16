@@ -1,2 +1,2 @@
 # RxSwift-Study
-RxSwift 공부하는 레포
+Study RxSwift
